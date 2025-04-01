@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("./assets/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: #181729;
+}
+
+.mainBody {
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.form {
+  font-family: Helvetica, sans-serif;
+  max-width: 400px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 16px;
+  background: #ffffff;
+}
+
+.form h1 {
+  background: #03773f;
+  padding: 20px 0;
+  font-weight: 300;
+  text-align: center;
+  color: #fff;
+  margin: -16px -16px 16px -16px;
+  font-size: 25px;
+}
+
+.form input[type="text"],
+.form input[type="url"] {
+  width: 100%;
+  background: #fff;
+  margin-bottom: 4%;
+  border: 1px solid #ccc;
+  padding: 4%;
+  font-size: 17px;
+  color: rgb(9, 61, 125);
+}
+
+.form input[type="text"]:focus,
+.form input[type="url"]:focus {
+  box-shadow: 0 0 5px #5868bf;
+  padding: 4%;
+  border: 1px solid #5868bf;
+}
+
+.form button {
+  width: 180px;
+  margin: 0 auto;
+  padding: 3%;
+  background: #0853b6;
+  border: none;
+  border-radius: 3px;
+  font-size: 17px;
+  border-top-style: none;
+  border-right-style: none;
+  border-left-style: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background: rgba(88, 104, 191, 0.5);
+}
+
+.qrcode {
+  padding: 16px;
+}
+
+.print_data {
+  font-size: 1rem;
+  color: white;
+  border-top: 2px dashed #856cb3;
+  padding: 8px;
+  background-color: #403e5da6;
+}
+
+.qrcode img {
+  width: 300px;
+  box-shadow: 0 0 10px rgba(67, 67, 68, 0.25);
+  padding: 4px;
+}
+
+.wholeQr {
+  display: block;
+  margin: 0 auto;
+  width: 335px;
+  text-align: center;
+}
+
+#print_area {
+  border: 2px dashed #856cb3;
+  background-color: #4d465a6b;
+  border-radius: 12px;
+}
+
+.gen_form {
+  background-color: transparent;
+  padding: 2rem 3rem;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  margin: 5% 10%;
+  position: relative;
+  overflow: hidden;
+}
+
+.gen_form::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 0.5rem;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: #2a294794;
+}
+
+.mainHeading {
+  font-size: 2rem;
+  text-align: center;
+  color: #ffffffab;
+  padding: 1.5rem;
+}
+
+.form_input {
+  display: block;
+  width: 100%;
+  background-color: #484661bd;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 0.25rem 1rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.form_input::placeholder {
+  color: #fff;
+  opacity: 0.4;
+}
+
+.gen_form button {
+  font-size: 1.2rem;
+}
+
+#watermark {
+  color: #ffffff8c;
+  font-size: 0.8rem;
+}
+
+.sampleQr {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #ffffffb8;
+  padding: 0% 8%;
+  background-color: #ffffff1f;
+  box-shadow: 0 0 10px rgba(67, 67, 68, 0.25);
+  border-radius: 12px;
+}
+
+.custom_btn {
+  font-size: 1.2rem !important;
+  background: linear-gradient(
+    75deg,
+    rgb(39, 72, 202) 20%,
+    rgb(7, 118, 204) 71%
+  );
+  color: #fff !important;
+  font-weight: 500 !important;
+  border: 0;
+}
+
+.custom_btn:hover {
+  background: linear-gradient(
+    75deg,
+    rgb(39, 72, 202) 20%,
+    rgb(7, 118, 204) 71%
+  );
+  color: #dbdbdb !important;
+}
+
+label {
+  font-size: 1.3rem;
+  color: #ffffffba;
+  margin-left: 0.25rem;
+  font-weight: 500;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #181729e0;
+}
+
+footer .container {
+  display: flex;
+}
+
+footer p {
+  margin: 0;
+  color: #bab3b399;
+  font-size: 0.8rem;
+}
+
+footer p a {
+  color: #ffffffbd;
+  text-decoration: none;
+}
+
+/* responsive */
+@media screen and (max-width: 530px) {
+  .genBtns {
+    flex-direction: column;
+  }
+  footer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .gen_form {
+    padding: 2rem;
+    margin: 5%;
+  }
+  .wholeQr {
+    margin: 0 9%;
+  }
+  .mainHeading {
+    padding-bottom: 0;
+  }
+  .mainBody .container > .row {
+    margin-top: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .sampleQr {
+    width: 250px;
+    height: 250px;
+  }
+  .qrcode img {
+    width: 250px;
+  }
+  .wholeQr {
+    width: 285px;
+  }
+}
